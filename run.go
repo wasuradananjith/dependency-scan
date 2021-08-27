@@ -20,10 +20,12 @@ func main() {
 	f := excelize.NewFile()
 	columnA := "A"
 	columnB := "B"
+	columnC := "C"
 	cell := 1
 
 	f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnA, cell), "Dependency")
-	f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnB, cell), "FileName")
+	f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnB, cell), "Version")
+	f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnC, cell), "FileName")
 
 	cell++
 
@@ -50,9 +52,10 @@ func main() {
 			fmt.Println(err)
 		}
 
-		for key, _ := range packageJson.Dependencies {
+		for key, version := range packageJson.Dependencies {
 			f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnA, cell), key)
-			f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnB, cell), fileName)
+			f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnB, cell), version)
+			f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnC, cell), fileName)
 			cell++
 		}
 
