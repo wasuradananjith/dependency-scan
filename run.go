@@ -58,7 +58,7 @@ func main() {
 		}
 
 		for key, version := range packageJson.Dependencies {
-			f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnA, cell), key)
+			f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnA, cell), key+".npm")
 			f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnB, cell), version)
 			f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnC, cell), fileName)
 			cell++
