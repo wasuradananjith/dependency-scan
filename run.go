@@ -36,8 +36,13 @@ func main() {
 		fmt.Println(err)
 	}
 
+	fileCount := 0
+
 	for _, file := range files {
+
 		fileName := file.Name()
+		fmt.Println("Reading file " + fileName)
+		fileCount++
 
 		content, err := ioutil.ReadFile(filePath + "/" + fileName)
 		if err != nil {
@@ -61,12 +66,12 @@ func main() {
 
 	}
 
+	fmt.Printf("%s%d\n", "File count ", fileCount)
+
 	// Save spreadsheet by the given path.
 	if err := f.SaveAs("Book1.xlsx"); err != nil {
 		fmt.Println(err)
 	}
-
-	//fmt.Println(packageJson)
 }
 
 func callGitHubAPI() {
