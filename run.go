@@ -13,7 +13,7 @@ import (
 
 // APIDefinition represents an API artifact in APIM
 type PackageJson struct {
-	Dependencies map[string]string `json:"dependencies,omitempty"`
+	Dependencies map[string]string `json:"devDependencies,omitempty"`
 }
 
 func main() {
@@ -23,7 +23,7 @@ func main() {
 	columnC := "C"
 	cell := 1
 
-	f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnA, cell), "Dependency")
+	f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnA, cell), "Dev Dependency")
 	f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnB, cell), "Version")
 	f.SetCellValue("Sheet1", fmt.Sprintf("%s%d", columnC, cell), "FileName")
 
