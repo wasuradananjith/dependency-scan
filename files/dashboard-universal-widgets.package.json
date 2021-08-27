@@ -1,0 +1,42 @@
+{
+  "name": "universal-widget",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^1.5.0",
+    "@material-ui/icons": "^2.0.3",
+    "@wso2-dashboards/widget": "^1.5.0",
+    "axios": "^0.17.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-jss": "^8.6.1",
+    "react-select": "2.1.0",
+    "react-vizgrammar": "^0.8.4",
+    "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "webpack --mode production",
+    "dev": "NODE_ENV=development webpack --mode development --progress --devtool source-map",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "ajv": "^5.2.2",
+    "babel-loader": "^8.0.5",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^2.1.0",
+    "html-loader": "^0.5.5",
+    "node-sass": "^4.13.0",
+    "recharts": "^1.0.0-alpha.4",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  }
+}
